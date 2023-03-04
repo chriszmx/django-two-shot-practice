@@ -21,8 +21,9 @@ from django.shortcuts import redirect
 def redirect_to_receipt(request):
     return redirect('home')
 
+
 urlpatterns = [
-    path('', redirect_to_receipt, name='home'),
+    path('', redirect_to_receipt),
     path('receipts/', include('receipts.urls')),
     path("admin/", admin.site.urls),
 ]

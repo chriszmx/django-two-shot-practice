@@ -6,3 +6,5 @@ from receipts.views import (receipt,
 urlpatterns = [
     path('', receipt, name='home'),
 ]
+
+
