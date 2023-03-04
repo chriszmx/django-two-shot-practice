@@ -23,6 +23,7 @@ def redirect_to_receipt(request):
 
 
 urlpatterns = [
+    path('accounts/', include('accounts.urls')),
     path('', redirect_to_receipt),
     path('receipts/', include('receipts.urls')),
     path("admin/", admin.site.urls),
