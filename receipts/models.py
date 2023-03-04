@@ -24,8 +24,8 @@ class Account(models.Model):
                               on_delete=models.CASCADE,
                               related_name='accounts')
 
-    # def __str__(self):
-    #     return self.task
+    def __str__(self):
+        return self.name
 
 
 class Receipt(models.Model):
@@ -40,3 +40,7 @@ class Receipt(models.Model):
                                  on_delete=models.CASCADE,
                                  related_name='receipts',
                                  null=True)
+    account = models.ForeignKey(Account,
+                                on_delete=models.CASCADE,
+                                related_name='receipts',
+                                null=True)
