@@ -24,8 +24,9 @@ class ExpenseCategoryForm(ModelForm):
 
 
 class AccountForm(ModelForm):
-    model = Account
-    fields = [
-        'name',
-        'number'
-    ]
+    class Meta:
+        model = Account
+        fields = [
+            'name',
+            'number'
+        ]
