@@ -6,7 +6,7 @@ from receipts.models import Receipt
 # Create your views here.
 @login_required
 def receipt(request):
-    receipts = Receipt.objects.all()
+    receipts = Receipt.objects.filter(purchaser=request.user)
     context = {
         'receipts': receipts,
     }

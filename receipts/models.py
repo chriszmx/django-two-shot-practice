@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+# from django.contrib.auth.decorators import login_required
 # Create your models here.
 # need to import django.conf import settings for AUTH_USER_MODEL
 
